@@ -1,4 +1,4 @@
-# 🌟 Mohamed Silar's LeetCode Solutions 🌟
+# 🌟 LeetCode Solutions 🌟
 
 Welcome to my personal LeetCode problem-solving repository! This project highlights my journey of mastering **Data Structures**, **Algorithms**, and **SQL** through consistent LeetCode practice. 💡🚀
 
