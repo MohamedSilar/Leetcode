@@ -12,7 +12,7 @@ Welcome to my personal LeetCode problem-solving repository! This project highlig
 ## 🛠️ Tech Stack
 - **Languages**: Java, SQL
 - **Editor**: VS Code
-- **Platform**: [LeetCode](https://leetcode.com/)
+- **Platform**: [LeetCode](https://leetcode.com/u/MohamedSilar/)
 - **Version Control**: Git & GitHub
 
 ## 🚀 Getting Started
