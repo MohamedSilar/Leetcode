@@ -29,7 +29,7 @@ class Solution {
     private static boolean caneatall(int[] piles , int h , int mid){
             int hours = 0;
         for(int bananas : piles){
-                hours+= Math.ceil((double) bananas/ mid);
+                hours+= (bananas + mid - 1) / mid;
             }
 
             return hours<=h;
