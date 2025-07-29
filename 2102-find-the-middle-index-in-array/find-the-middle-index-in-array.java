@@ -5,8 +5,6 @@ class Solution {
         for(int num : nums){
             totalsum += num;
         }
-
-
         int left = 0;
         for(int i=0;i<n;i++){
            int right = totalsum - left - nums[i];
