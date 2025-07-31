@@ -22,14 +22,10 @@ class Solution {
             // return true;
 
             if (s.length() != t.length()) return false;
-
-
             Map<Character, Integer> maps = new HashMap<>();
-
             for(int i=0;i<s.length();i++){
                 maps.put(s.charAt(i) ,maps.getOrDefault(s.charAt(i),0) +1);
             }
-
             for(int i = 0 ;i<t.length();i++){
                 if(maps.containsKey(t.charAt(i)) && maps.get(t.charAt(i))>0){
                     maps.put(t.charAt(i) , maps.get(t.charAt(i))-1);
@@ -38,7 +34,6 @@ class Solution {
                      return false;
                 }
             }
-
             return true;
     }
 }
