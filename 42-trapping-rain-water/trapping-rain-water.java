@@ -24,8 +24,5 @@ class Solution {
             totalwater +=Math.max(0,Math.min(maxleft[i] , maxright[i]) - height[i]);
         }
         return totalwater;
-
-
-        
     }
 }
