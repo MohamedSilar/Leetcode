@@ -16,18 +16,11 @@ class Solution {
         // return left;
 
         int n = nums.length;
-       // int i =0;
-
-        for(int i=0;i<nums.length;i++){
+        for(int i=0;i<n;i++){
             if(nums[i] >= target){
                 return i;
             }
         }
         return n;
-
-
-
-
-
         }
 }
