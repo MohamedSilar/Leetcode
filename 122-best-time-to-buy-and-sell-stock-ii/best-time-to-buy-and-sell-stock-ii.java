@@ -8,7 +8,6 @@ class Solution {
             }
         }
         return profit;
-
     }
 }
 //         int profit =0;
