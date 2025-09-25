@@ -1,17 +1,26 @@
-class Solution {
-    public boolean isValid(String s) {
-        Stack<Character> seen = new Stack<>();
+import java.util.Stack;
 
-        for(char c : s.toCharArray()){
-            if(c=='{' || c== '(' || c=='['){
-                seen.push(c);
-            }else{
-                if(seen.isEmpty()) return false;
-                char top = seen.pop();
-                if((c==')' && top !='(') || (c=='}' && top !='{')||(c==']' && top !='[')) return false;
+public class Solution {
+    public boolean isValid(String s) {
+        Stack<Character> stack = new Stack<>();
+
+        for (char c : s.toCharArray()) {
+            // Push opening brackets
+            if (c == '(' || c == '{' || c == '[') {
+                stack.push(c);
+            } 
+            // Check closing brackets
+            else {
+                if (stack.isEmpty()) return false; // no opening bracket
+                char top = stack.pop();
+                if ((c == ')' && top != '(') ||
+                    (c == '}' && top != '{') ||
+                    (c == ']' && top != '[')) {
+                    return false; // mismatched pair
+                }
             }
         }
-        return seen.isEmpty();
-        
+        // Valid only if no unmatched opening brackets remain
+        return stack.isEmpty();
     }
 }
