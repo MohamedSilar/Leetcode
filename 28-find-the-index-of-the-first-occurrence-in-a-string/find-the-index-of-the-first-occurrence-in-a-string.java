@@ -1,20 +1,18 @@
-class Solution {
+public class Solution {
     public int strStr(String haystack, String needle) {
-        int h = haystack.length();
-        int n = needle.length();
+        int n = haystack.length();
+        int m = needle.length();
 
-        for(int i=0;i<=h-n;i++){
+        if (m == 0) return 0; // empty needle is always found at 0
+
+        for (int i = 0; i <= n - m; i++) {
             int j = 0;
-
-            while(j < n && haystack.charAt(i+j)==needle.charAt(j)){
+            while (j < m && haystack.charAt(i + j) == needle.charAt(j)) {
                 j++;
-                
             }
-            if(j==needle.length()){
-                return i;
-            } 
+            if (j == m) return i; // found needle starting at index i
         }
-        return -1;
 
+        return -1; // not found
     }
 }
