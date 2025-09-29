@@ -4,10 +4,7 @@ public class Solution {
 
         char[] hexChars = "0123456789abcdef".toCharArray();
         StringBuilder sb = new StringBuilder();
-
-      
         long n = num & 0xFFFFFFFFL; 
-
         while (n > 0) {
             int remainder = (int)(n % 16);
             sb.append(hexChars[remainder]);
