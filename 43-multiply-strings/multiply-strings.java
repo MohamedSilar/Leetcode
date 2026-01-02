@@ -1,36 +1,62 @@
 class Solution {
     public String multiply(String num1, String num2) {
-
         int n = num1.length();
         int m = num2.length();
-
-        int[] result = new int[n+m];
-
-        for(int i = n-1 ;i>=0;i--){
-            int digit = num1.charAt(i) - '0';
-
-            for(int j = m-1;j>=0;j--){
-                int digit1 = num2.charAt(j) - '0';
-
-                int mul = digit * digit1;
-
-                int sum = mul + result[i+j+1];
-
-                result[i+j+1]=sum  % 10;
-                result[i + j] += sum / 10; 
-            }
+        int[] result = new int[n + m];
+        for(int i = n-1 ; i>=0;i--){
+            int digit1 = num1.charAt(i) - '0';
+        
+        for(int j = m-1;j>=0;j--){
+            int digit2 = num2.charAt(j) - '0';
+        
+        int mul = digit1 * digit2;
+        int sum = mul + result [i+j+1];
+        result [i+j+1] = sum % 10;
+        result [i+j] += sum /10;
         }
-
-        StringBuilder sb = new StringBuilder();
-
+        }
+        StringBuilder sb  = new StringBuilder();
         boolean leadingzero = true;
-
         for(int num : result){
-            if(num==0 && leadingzero) continue;
+            if(num == 0 && leadingzero) continue;
             leadingzero = false;
-            sb.append((char)(num + '0'));
+              sb.append((char)(num + '0'));
         }
-        return sb.length() == 0 ? "0" : sb.toString();
+         return sb.length() == 0 ? "0" : sb.toString();
 
     }
 }
+
+//         int n = num1.length();
+//         int m = num2.length();
+
+//         int[] result = new int[n+m];
+
+//         for(int i = n-1 ;i>=0;i--){
+//             int digit = num1.charAt(i) - '0';
+
+//             for(int j = m-1;j>=0;j--){
+//                 int digit1 = num2.charAt(j) - '0';
+
+//                 int mul = digit * digit1;
+
+//                 int sum = mul + result[i+j+1];
+
+//                 result[i+j+1]=sum  % 10;
+//                 result[i + j] += sum / 10; 
+//             }
+//         }
+
+//         StringBuilder sb = new StringBuilder();
+
+//         boolean leadingzero = true;
+
+//         for(int num : result){
+//             if(num==0 && leadingzero) continue;
+//             leadingzero = false;
+//             sb.append((char)(num + '0'));
+//         }
+//         return sb.length() == 0 ? "0" : sb.toString();
+
+//     }
+// }
